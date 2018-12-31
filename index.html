@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JS Application: Psychic Game</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<script type="text/javascript" src="./assets/javascript/game.js"></script>
+</head>
+<body>
+	<div id="mainBoard">
+		<h1>The Psychic Game</h1><br><br>
+		<p>Guess what letter I'm thinking of: </p>
+		<p id="guessLetterHere" class="fontForGame"></p>
+		<p>Guesses Left: </p>
+		<p id="gRem" class="fontForGame">15</p>
+		<p>Your Guesses So Far: </p>
+		<p id="guessLettersHere" class="fontForGame"></p>
+		<div id="scores">
+			<p>Wins: <span id="totalWins"></span></p>
+			<p>Losses: <span id="totalLoss"></span></p>
+			<p>Games Played: <span id="gamesPlayed"></span></p>
+		</div>
+		<br>
+		<input type="button" value="Reset" id="resetButton">
+	</div>
+	<audio id="correctAudio">
+		<source src="./assets/images/sounds/correct-answer.mp3" type="audio/mpeg">
+	</audio>		
+	<audio id="wrongAudio">
+		<source src="./assets/images/sounds/wrong-answer.wav" type="audio/mpeg">
+	</audio>
+	<audio id="existsAudio">
+		<source src="./assets/images/sounds/error.mp3" type="audio/mpeg">
+	</audio>	
+</body>
+</html>

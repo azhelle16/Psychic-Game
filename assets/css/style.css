@@ -1,0 +1,49 @@
+body {
+	background-image: url("../images/main.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+#mainBoard {
+	width: 560px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: 0px;
+    margin-left: 0px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    opacity: 0.7;
+    padding: 15px;
+    height: 600px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.fontForGame {
+	font-size: 30px;
+}
+
+input[type=button]{
+    width: 15%;
+    padding: 5px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #680012;
+    font-size: 15px;
+}
+
+#gRem {
+	color: green;
+    font-size: 30px;
+}
+
+#guessLettersHere {
+	letter-spacing: 5px;
+}
