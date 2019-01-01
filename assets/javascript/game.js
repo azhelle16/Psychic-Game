@@ -59,9 +59,9 @@ var gamePiece = {
 		 #  FUNCTION NAME : listenToKeyStrokes
 		 #  AUTHOR        : Maricel Louise Sumulong
 		 #  DATE          : December 30, 2018 PST
-		 #  MODIFIED BY   : 
-		 #  REVISION DATE : 
-		 #  REVISION #    : 
+		 #  MODIFIED BY   : Maricel Louise Sumulong
+		 #  REVISION DATE : December 31, 2018 PST
+		 #  REVISION #    : 1
 		 #  DESCRIPTION   : Listens to user key inputs
 		 #  PARAMETERS    : key code event
 		 #
@@ -103,11 +103,14 @@ var gamePiece = {
 
 			//check if there's still guess remaining
 			if (document.getElementById("gRem").innerHTML == 0) {
-				gamePiece.resetValues();
 				gamePiece.totalLoss += 1;
 				document.getElementById("totalLoss").innerHTML = gamePiece.totalLoss;
 				document.getElementById("wrongAudio").play();
-				gamePiece.pickRandomLetter();
+				document.getElementById("guessLetterHere").innerHTML = gamePiece.wordToGuess;
+				setTimeout(function() {
+					gamePiece.resetValues();
+					gamePiece.pickRandomLetter();
+				}, 1500);
 				gamePiece.totalGames += 1;
 				document.getElementById("gamesPlayed").innerHTML = gamePiece.totalGames;
 			}
@@ -119,8 +122,10 @@ var gamePiece = {
 				gamePiece.totalWins += 1;
             	document.getElementById("totalWins").innerHTML = gamePiece.totalWins;
             	document.getElementById("correctAudio").play();
-            	gamePiece.resetValues();
-            	gamePiece.pickRandomLetter();
+            	setTimeout(function() {
+					gamePiece.resetValues();
+					gamePiece.pickRandomLetter();
+				}, 1500);
             	gamePiece.totalGames += 1;
             	document.getElementById("gamesPlayed").innerHTML = gamePiece.totalGames;
 			}

@@ -20,11 +20,16 @@ body {
     height: 600px;
     border-radius: 15px;
     text-align: center;
-    line-height: 20px;
+    line-height: 15px;
 }
 
 .fontForGame {
 	font-size: 30px;
+}
+
+.ffg {
+    font-size: 50px;
+    text-transform: uppercase;
 }
 
 input[type=button]{
@@ -46,4 +51,16 @@ input[type=button]{
 
 #guessLettersHere {
 	letter-spacing: 5px;
+}
+
+#totalLoss {
+    color: red;
+}
+
+#gamesPlayed {
+    color: cyan;
+}
+
+#totalWins {
+    color: green;
 }
