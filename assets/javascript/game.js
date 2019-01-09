@@ -209,9 +209,9 @@ var gamePiece = {
 		 #  FUNCTION NAME : reset
 		 #  AUTHOR        : Maricel Louise Sumulong
 		 #  DATE          : December 30, 2018 PST
-		 #  MODIFIED BY   : 
-		 #  REVISION DATE : 
-		 #  REVISION #    : 
+		 #  MODIFIED BY   : Maricel Louise Sumulong
+		 #  REVISION DATE : January 08, 2019 PST
+		 #  REVISION #    : 1
 		 #  DESCRIPTION   : resets the whole game
 		 #  PARAMETERS    : none
 		 #
@@ -227,6 +227,9 @@ var gamePiece = {
 		document.getElementById("gamesPlayed").innerHTML = 0;
 		gamePiece.pickRandomLetter();
 		document.getElementById("gRem").style.color = "green";
+		gamePiece.totalLoss = 0;
+		gamePiece.totalWins = 0;
+		gamePiece.totalGames = 0;
 	
 	}
 
